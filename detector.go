@@ -16,7 +16,6 @@ func NewReader(r io.Reader) *csv.Reader {
 
 	sniff := newSniffer()
 	sniff.analyse(csvReader)
-	sniff.sniff()
 
 	reader.Seek(0, 0)
 

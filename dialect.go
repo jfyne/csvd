@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// Describes a dialect of the CSV, and how likely it is the one.
 type dialect struct {
 	delimiter  rune
 	likelihood []float64
