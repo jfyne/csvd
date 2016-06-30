@@ -17,21 +17,22 @@ package main
 
 import (
     "os"
+    "strings"
 
     "github.com/jfyne/go-csv-detector"
 )
 
 func main() {
-    file, err := os.OpenFile("example.csv", os.O_READONLY, os.ModePerm)
-    if err != nil {
-        panic(err)
-    }
-    defer file.Close()
+    example := `first_name;last_name;username
+"Rob";"Pike";rob
+Ken;Thompson;ken
+"Robert";"Griesemer";"gri"
+`
 
     // Get regular old "encoding/csv" with its delimiter detected.
-    reader := detector.NewReader(file)
+    reader := detector.NewReader(strings.NewReader(example))
 
-    // Use as usual
+    // reader.Comma will be ';' instead of the default. Use as usual
     reader.ReadAll()
 }
 ```
