@@ -16,7 +16,6 @@ This is quite a simple implementation, the following caveats should be considere
 package main
 
 import (
-    "os"
     "strings"
 
     "github.com/jfyne/go-csv-detector"
