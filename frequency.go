@@ -1,4 +1,4 @@
-package detector
+package csvd
 
 import (
 	"fmt"

@@ -1,6 +1,6 @@
-# go-csv-detector
+# csvd
 
-This library automatically detects the CSV delimiter and returns a `*csv.Reader` instance.
+This Golang library automatically detects the CSV delimiter and returns a `*csv.Reader` instance.
 
 ## Caveats
 
@@ -18,7 +18,7 @@ package main
 import (
     "strings"
 
-    "github.com/jfyne/go-csv-detector"
+    "github.com/jfyne/csvd"
 )
 
 func main() {
@@ -28,8 +28,8 @@ Ken;Thompson;ken
 "Robert";"Griesemer";"gri"
 `
 
-    // Get regular old "encoding/csv" with its delimiter detected.
-    reader := detector.NewReader(strings.NewReader(example))
+    // Get regular "encoding/csv" with its delimiter detected.
+    reader := csvd.NewReader(strings.NewReader(example))
 
     // reader.Comma will be ';' instead of the default. Use as usual
     reader.ReadAll()
