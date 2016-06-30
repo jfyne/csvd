@@ -1,5 +1,8 @@
 # csvd
 
+[![Build Status](https://drone.io/github.com/jfyne/csvd/status.png)](https://drone.io/github.com/jfyne/csvd/latest)
+[![GoDoc](https://godoc.org/github.com/jfyne/csvd?status.svg)](https://godoc.org/github.com/jfyne/csvd)
+
 This Golang library automatically detects the CSV delimiter and returns a `*csv.Reader` instance.
 
 ## Caveats
