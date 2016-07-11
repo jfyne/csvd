@@ -10,7 +10,7 @@ This Golang library automatically detects the CSV delimiter and returns a `*csv.
 This is quite a simple implementation, the following caveats should be considered:
 
 - The whole reader will be read into memory before returning the CSV reader, so it is not suitable for massive CSV's.
-- At the moment it checks for the following delimiters `, \t ; :`
+- At the moment it checks for the following delimiters `, \t ; : |`
 - It's not bullet proof! Quick and simple.
 
 ## Usage

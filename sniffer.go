@@ -18,6 +18,7 @@ func newSniffer() *sniffer {
 		'\t': {},
 		';':  {},
 		':':  {},
+		'|':  {},
 	}
 
 	return &sniffer{
