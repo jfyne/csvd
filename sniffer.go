@@ -74,6 +74,9 @@ func (s *Sniffer) sniff() rune {
 		}
 	}
 	sort.Sort(ds)
+	if len(ds) == 0 {
+		return ','
+	}
 	s.delimiter = ds[0].delimiter
 	return s.delimiter
 }
