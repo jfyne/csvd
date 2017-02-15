@@ -28,7 +28,7 @@ func NewSniffer(sampleSize int, delims ...rune) *Sniffer {
 	}
 
 	return &Sniffer{
-		sampleSize:   15,
+		sampleSize:   sampleSize,
 		delimiter:    ',',
 		frequencyMap: delimiterMap,
 	}
